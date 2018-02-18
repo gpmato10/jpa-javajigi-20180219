@@ -6,26 +6,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User {
-
+public class Book
+{
     @Id
     @GeneratedValue
     private Long id;
 
     @Column(nullable = false, length = 20)
-    private String userId;
+    private String userid;
     private String password;
-    private String name;
-    private String email;
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Book{" +
                 "id=" + id +
-                ", userId='" + userId + '\'' +
+                ", userid='" + userid + '\'' +
                 ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
                 '}';
     }
 
@@ -37,12 +33,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getPassword() {
@@ -51,21 +47,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }
